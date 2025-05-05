@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --vermelho: #ff7a7a;
+  --verde: #38cc8c;
+  --azul: #6055a5;
+  --dark-blue: #3e3c49;
+  --gray-blue: #b9b6d3;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--vermelho);
+  padding: 0 130px;
+  background-image: linear-gradient(rgba(227, 60, 73, 0.9), rgba(227, 60, 73, 0.1)), url(background.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  .h1 {
+  
+  
+    font-size: 41px;
+    border-right: 16px solid #f1e100;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    width: fit-content;
+    flex-shrink: 0;
+    animation: write 5s steps(21, end) infinite;
+  }
+  
+  
+  
+  @keyframes write {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 24ch;
+    }
+  }
+  
+  
+  
+  
+  h1,
+  p,
+  p,
+  p {
+    color: white;
+  }
+  
+  
+  h6 {
+    width: 400px;
+    line-height: 46px;
+    background-color: var(--azul);
+    text-align: center;
+    color: white;
+    font-size: 19px;
+    border-radius: 8px;
+    box-shadow: 1px 5px 12px #00000020;
+  }
+  
+  form {
+    width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 1px 5px 12px #00000020;
+    padding: 30px;
+    margin-top: 16px;
+  
+    input {
+      width: 100%;
+      height: 46px;
+      border: 1px solid var(--gray-blue);
+      padding-left: 16px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+  
+    button {
+      width: 100%;
+      height: 46px;
+      background-color: var(--verde);
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  
+    button:hover {
+      transform: scale(1.05);
+      /* aumenta levemente o botão */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* sombra suave */
+      background-color: #16a34a;
+      /* tom mais escuro de verde */
+    }
+  
+  }
+}
+
+
+
+#cadastro {
+  width: 100%;
+  height: 100vh;
+  background-color: #c92072;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cadastro form{
+width: 700px;
+background-color: white;
+border-radius: 8px;
+padding: 16px;
+
+}
+
+#cadastro form .coluna-2{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+}
+
+#cadastro form .coluna-4{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 16px;
+}
+
+
+
+#cadastro form .campo label{
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+#cadastro form .campo input,
+#cadastro form .campo select{
+  height: 40px;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  padding-left: 10px; 
+  width: 100%;
+}
+
+#cadastro form .campo input:focus,
+#cadastro form .campo select:focus{
+outline-color: #c92072;
+}
+
